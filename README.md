@@ -109,10 +109,11 @@ The SQL implementation (`etl_branch_salary.sql`) is a single SQL script that cre
 ## Workflow and analysis
 
 ### Workflow
-The Python implementation includes robust exception handling:
-- Logging is used throughout the pipeline to track progress and errors
-- Each major function is wrapped in a try-except block to catch and report specific errors
-- Invalid data (e.g., missing times) is handled gracefully with appropriate default values or removal
+
+#### Python Workflow
+Load CSV & Filter by 1 day before &rarr; Remove duplicate values &rarr; Transforming Checkin and Checkout Timestamp
+&rarr; Calculate time different &rarr; Join and aggregate two tables &rarr; Load Incremental to Bigquery
+
 
 ### Analysis
 
@@ -122,10 +123,12 @@ Understanding there is data cleaning or transformation in this python, this sect
  - There is duplicate value in this raw python data especially on timesheets.csv
     ![alt text](img/image.png)
  - To remove duplicate there is two method i use first check if column checkout with null will be removed, else it will remove the last index
-    ![alt text](image2.png)
+    ![alt text](img/image2.png)
 2. **Adjusting time**:
-
-## BELUM DITAMBAH JALANNYA PYTHON GIMANA TERUS ALASAN TRANSFORMASI NYA ADA BANYAK
+ - Fill Null Values, based on their checkin or checkout, this is because from the image below there is person that may working at night or morning
+    ![alt text](img/image3.png)
+ - Adjust checkout time, if checkout time less than checkin (I'm assuming that they overwork until the next day or maybe night shift)
+    ![alt text](img/image4.png)
 
 
 ## Pipeline Optimization
