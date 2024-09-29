@@ -154,4 +154,6 @@ I have developed a mini-project demonstrating data migration from Google BigQuer
 - **Tool Used**: Airbyte for ETL operations
 - **Use Case**: The project showcases efficient data movement, transformation, and loading from a cloud-based data warehouse to a scalable, high-performance analytical database, addressing real-world data integration challenges.
 
+
+### Youtube video:
 [![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/CEr3pQliJwE/0.jpg)](https://www.youtube.com/watch?v=CEr3pQliJwE)
