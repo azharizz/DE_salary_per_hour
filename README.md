@@ -10,8 +10,9 @@ This repository contains two implementations of an ETL (Extract, Transform, Load
 4. [Prerequisites](#prerequisites)
 5. [Usage](#usage)
 6. [Code Structure](#code-structure)
-7. [Exception Handling](#exception-handling)
+7. [Workflow and Analysis](#workflow-analysis)
 8. [Pipeline Optimization](#pipeline-optimization)
+8. [Bonus](#bonus)
 
 ## Python Implementation
 
@@ -105,12 +106,27 @@ The SQL implementation (`etl_branch_salary.sql`) is a single SQL script that cre
 
 - Single file: `etl_branch_salary.sql`
 
-## Exception Handling
+## Workflow and analysis
 
+### Workflow
 The Python implementation includes robust exception handling:
 - Logging is used throughout the pipeline to track progress and errors
 - Each major function is wrapped in a try-except block to catch and report specific errors
 - Invalid data (e.g., missing times) is handled gracefully with appropriate default values or removal
+
+### Analysis
+
+Understanding there is data cleaning or transformation in this python, this section is to explain the reason behind it.
+
+1. **Removing Duplicate Value**:
+ - There is duplicate value in this raw python data especially on timesheets.csv
+    ![alt text](img/image.png)
+ - To remove duplicate there is two method i use first check if column checkout with null will be removed, else it will remove the last index
+    ![alt text](image2.png)
+2. **Adjusting time**:
+
+## BELUM DITAMBAH JALANNYA PYTHON GIMANA TERUS ALASAN TRANSFORMASI NYA ADA BANYAK
+
 
 ## Pipeline Optimization
 
@@ -122,3 +138,6 @@ The Python implementation includes robust exception handling:
    - The Python implementation uses efficient pandas operations and BigQuery's batch insert capabilities.
 
 For any questions or issues, please open an issue in the repository or contact the maintainer.
+
+
+## Bonus Project
