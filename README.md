@@ -144,3 +144,14 @@ For any questions or issues, please open an issue in the repository or contact t
 
 
 ## Bonus Project
+
+### Data Migration from BigQuery to Alibaba Cloud ApsaraDB for ClickHouse using Airbyte
+
+I have developed a mini-project demonstrating data migration from Google BigQuery to Alibaba Cloud ApsaraDB for ClickHouse. This project utilizes [Airbyte](https://airbyte.com/), an open-source data integration tool, to facilitate seamless data transfer between these two platforms. Key features include:
+
+- **Source**: Google BigQuery
+- **Destination**: Alibaba Cloud ApsaraDB for ClickHouse
+- **Tool Used**: Airbyte for ETL operations
+- **Use Case**: The project showcases efficient data movement, transformation, and loading from a cloud-based data warehouse to a scalable, high-performance analytical database, addressing real-world data integration challenges.
+
+[![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/CEr3pQliJwE/0.jpg)](https://www.youtube.com/watch?v=CEr3pQliJwE)
